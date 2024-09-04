@@ -32,7 +32,7 @@ async function sendTasksReminder(client) {
     if (!channel) return console.error("Couldn't find the 💻-wspólna-praca channel.");
 
     try {
-        await message.channel.send('Zrób sobie listę zadań na ten tydzień, kochaniutkx! @&1269984406685093899');
+        await channel.send('Zrób sobie listę zadań na ten tydzień, kochaniutkx! <@&1269984406685093899>');
         console.log('Przypomnienie o liście zadań wysłane.');
     } catch (error) {
         console.error('Błąd wysyłania przypomnienia o liście zadań:', error);
@@ -44,7 +44,7 @@ async function sendSummaryReminder(client) {
     if (!channel) return console.error("Couldn't find the 💻-wspólna-praca channel.");
 
     try {
-        await message.channel.send('No i jak tam zadanka, osobo wnusiowa? @&1269984406685093899');
+        await channel.send('No i jak tam zadanka, osobo wnusiowa? <@&1269984406685093899>');
         console.log('Przypomnienie o podsumowaniu wysłane.');
     } catch (error) {
         console.error('Błąd wysyłania przypomnienia o liście zadań:', error);
@@ -56,7 +56,7 @@ async function sendMonthlyReminder(client) {
     if (!channel) return console.error("Couldn't find the 💻-wspólna-praca channel.");
 
     try {
-        await message.channel.send('Jak minął Ci ostatni miesiąc, kochaniutkx? Jakie masz plany na kolejny? @&1269984406685093899');
+        await channel.send('Jak minął Ci ostatni miesiąc, kochaniutkx? Jakie masz plany na kolejny? <@&1269984406685093899>');
         console.log('Comiesięczny prompt zadaniowy wysłany.');
     } catch (error) {
         console.error('Błąd wysyłania comiesięcznego prompta zadaniowego:', error);
