@@ -53,7 +53,7 @@ const maleMessages = [
    "Za moich czasów było inaczej...",
    "Za dużo siedzisz przed tym komputerem, wyjdź na spacer!",
    "Ciągle tylko siedzisz na tym komputerze, a ziemniaczki nieobrane.",
-   "Nie garb się, wyprostuj plecy i ty też <@476807157052866563>",
+   "Nie garb się, wyprostuj plecy. I ty też <@476807157052866563>",
    "GDZIE OSOBO WNUSIOWA BEZ TEJ CZAPKI, PRZEWIEJE CIE",
    "Weź jeszcze dokładkę, specjalnie dla ciebie przygotowane",
    "Jak ty szybko rośniesz, zaraz mnie przerośniesz!",
