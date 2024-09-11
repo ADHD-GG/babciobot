@@ -100,7 +100,7 @@ client.on('messageCreate', async (message) => {
 
     messageCount++;
 
-    if (messageCount % 30 === 0) {
+    if (messageCount % 200 === 0) {
         const member = await message.guild.members.fetch(message.author.id);
         let messageSet = neutralMessages;
 
