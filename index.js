@@ -47,7 +47,6 @@ for (const file of eventFiles) {
 }
 
 const maleMessages = [
-   "A obiadek zjadłeś?",
    "Pewnie panny się biją o tego pięknego kawalera?",
    "Ale wyrosłeś, chyba Cię fasolą podlewają!",
    "Za moich czasów było inaczej...",
@@ -55,90 +54,54 @@ const maleMessages = [
    "Ciągle tylko siedzisz na tym komputerze, a ziemniaczki nieobrane.",
    "Nie garb się, wyprostuj plecy. I ty też <@476807157052866563>",
    "GDZIE OSOBO WNUSIOWA BEZ TEJ CZAPKI, PRZEWIEJE CIE",
-   "Weź jeszcze dokładkę, specjalnie dla ciebie przygotowane",
    "Jak ty szybko rośniesz, zaraz mnie przerośniesz!",
-   "A wodę dzisiaj to piłeś?",
-   "Pamiętaj, żeby się nawadniać!",
    "Weź sobie słoik dżemu z piwnicy, bo zrobiłam, bo w tym mieście to dobrych nie mają.",
    "Nie mogę wnusiu spauzować, to online jest.",
-   "Nie jesteś może głodny?",
    "Jak się dziś czujesz, wnusiu?",
-   "A leki to dziś wziąłeś?",
    "Czy jest Ci tam wygodnie?",
-   "Nie zapomnij napić się wody!",
    "Może herbatki?",
-   "Zrób sobie chwilę wolnego na dzienniczek!",
-   "Pora na przerwę na ćwiczenia rozciągające!",
-   "Nie siedź tyle przed ekranem! Popatrz w dal, żeby dać odpocząć pięknym oczkom!",
-   "Jak tam dzisiejsze zadanka?",
-   "Jak nie zjesz zupy, to nie dostaniesz lodów.",
    "Wyjmij łyżeczkę, bo sobie oko wydłubiesz!",
    "Ubierz się, bo mi zimno, jak na ciebie patrzę!",
-   "Bez chleba to się nie najesz.",
    "Jeszcze pierożka?",
-   "Dopiero co otworzył oczy i już przy tym komputerze…",
+   "Dopiero co otworzył oczy i już na tym komputerze…",
+   "Jak mija ci dzień, wnusiu?",
 ];
 
 const femaleMessages = [
-   "A obiadek zjadłaś?",
    "Pewnie wszyscy się biją o taką piękną pannę?",
    "Za moich czasów było inaczej...",
    "Za dużo siedzisz przed tym komputerem, wyjdź na spacer!",
    "Ciągle tylko siedzisz na tym komputerze, a ziemniaczki nieobrane.",
    "Nie garb się, wyprostuj plecy. I ty też <@476807157052866563>",
    "GDZIE OSOBO WNUSIOWA BEZ TEJ CZAPKI, PRZEWIEJE CIE",
-   "Weź jeszcze dokładkę, specjalnie dla ciebie przygotowane",
-   "A wodę dzisiaj to piłaś?",
-   "Pamiętaj, żeby się nawadniać!",
    "Weź sobie słoik dżemu z piwnicy, bo zrobiłam, bo w tym mieście to dobrych nie mają.",
    "Nie mogę wnusio spauzować, to online jest.",
-   "Nie jesteś może głodna?",
    "Jak się dziś czujesz, wnusio?",
-   "A leki to dziś wzięłaś?",
    "Czy jest Ci tam wygodnie?",
-   "Nie zapomnij napić się wody!",
    "Może herbatki?",
-   "Zrób sobie chwilę wolnego na dzienniczek!",
-   "Pora na przerwę na ćwiczenia rozciągające!",
-   "Nie siedź tyle przed ekranem! Popatrz w dal, żeby dać odpocząć pięknym oczkom!",
-   "Jak tam dzisiejsze zadanka?",
-   "Jak nie zjesz zupy, to nie dostaniesz lodów.",
    "Wyjmij łyżeczkę, bo sobie oko wydłubiesz!",
    "Ubierz się, bo mi zimno, jak na ciebie patrzę!",
-   "Bez chleba to się nie najesz.",
    "Jeszcze pierożka?",
-   "Dopiero co otworzyła oczy i już przy tym komputerze…",
+   "Dopiero co otworzyła oczy i już na tym komputerze…",
+   "Jak mija ci dzień, wnusio?",
 ];
 
 const neutralMessages = [
-   "A obiadek zjedzony?",
    "Pewnie wszyscy się biją o Ciebie, co?",
    "Za moich czasów było inaczej...",
    "Za dużo siedzisz przed tym komputerem, wyjdź na spacer!",
    "Ciągle tylko siedzisz na tym komputerze, a ziemniaczki nieobrane.",
    "Nie garb się, wyprostuj plecy. I ty też <@476807157052866563>",
    "GDZIE OSOBO WNUSIOWA BEZ TEJ CZAPKI, PRZEWIEJE CIE",
-   "Weź jeszcze dokładkę, specjalnie dla ciebie przygotowane",
-   "A woda dzisiaj była pita?",
-   "Pamiętaj, żeby się nawadniać!",
    "Weź sobie słoik dżemu z piwnicy, bo zrobiłam, bo w tym mieście to dobrych nie mają.",
    "Nie mogę spauzować, to online jest.",
-   "Nie jesteś może głodna?",
    "Jak się dziś czujesz, wnusix?",
-   "A leki to dziś wzięłoś?",
    "Czy jest Ci tam wygodnie?",
-   "Nie zapomnij napić się wody!",
-   "Może herbatki?",
-   "Zrób sobie chwilę wolnego na dzienniczek!",
-   "Pora na przerwę na ćwiczenia rozciągające!",
-   "Nie siedź tyle przed ekranem! Popatrz w dal, żeby dać odpocząć pięknym oczkom!",
-   "Jak tam dzisiejsze zadanka?",
-   "Jak nie zjesz zupy, to nie dostaniesz lodów.",
    "Wyjmij łyżeczkę, bo sobie oko wydłubiesz!",
    "Ubierz się, bo mi zimno, jak na ciebie patrzę!",
-   "Bez chleba to się nie najesz.",
    "Jeszcze pierożka?",
-   "Dopiero co otworzyłu oczy i już przy tym komputerze…",
+   "Dopiero co otworzyłu oczy i już na tym komputerze…",
+   "Jak mija ci dzień, wnusix?",
 ];
 
 let messageCount = 0;
@@ -148,7 +111,7 @@ client.on('messageCreate', async (message) => {
 
     messageCount++;
 
-    if (messageCount % 200 === 0) {
+    if (messageCount % 1000 === 0) {
         const member = await message.guild.members.fetch(message.author.id);
         let messageSet = neutralMessages;
 
