@@ -53,7 +53,7 @@ async function sendBodydoublingReminder(client) {
 
     const embed = new EmbedBuilder()
         .setColor('#FFD166')
-        .setTitle('Pora na sesję wspólnej pracy! <@&1269984406685093899>')
+        .setTitle('Pora na sesję wspólnej pracy!')
         .setDescription('Dołącz do kanału głosowego 💻-praca. 🧑‍💻')
         .setTimestamp();
 
@@ -89,7 +89,7 @@ async function sendTasksReminder(client) {
 
     const embed = new EmbedBuilder()
         .setColor('#dcccff')
-        .setTitle('Zrób sobie listę zadań na ten tydzień, kochaniutkx! <@&1269984406685093899>')
+        .setTitle('Zrób sobie listę zadań na ten tydzień, kochaniutkx!')
         .setDescription('Wypisz najważniejsze i najpilniejsze taski, które musisz zrobić w tym tygodniu. 🗓️🔝')
         .setTimestamp();
 
@@ -143,7 +143,7 @@ async function sendSummaryReminder(client) {
 
     const embed = new EmbedBuilder()
         .setColor('#dcccff')
-        .setTitle('No i jak tam zadanka, osobo wnusiowa? <@&1269984406685093899>')
+        .setTitle('No i jak tam zadanka, osobo wnusiowa?')
         .setDescription('Pochwal się sukcesami, podziel się blokerami i tym, co cię trapi w pracy. 🙌⭐')
         .setTimestamp();
 
@@ -179,7 +179,7 @@ async function sendMonthlyReminder(client) {
 
     const embed = new EmbedBuilder()
         .setColor('#d8a7ca')
-        .setTitle('Jak minął Ci ostatni miesiąc, kochaniutkx? Jakie masz plany na kolejny? <@&1269984406685093899>')
+        .setTitle('Jak minął Ci ostatni miesiąc, kochaniutkx? Jakie masz plany na kolejny?')
         .setDescription('Przy okazji zrób przegląd ważnych dat i dni wolnych. 🔮📅')
         .setTimestamp();
 
