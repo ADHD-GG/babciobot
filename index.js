@@ -97,6 +97,7 @@ const neutralMessages = [
    "Nie mogę spauzować, to online jest.",
    "Jak się dziś czujesz, wnusix?",
    "Czy jest Ci tam wygodnie?",
+   "Może herbatki?",
    "Wyjmij łyżeczkę, bo sobie oko wydłubiesz!",
    "Ubierz się, bo mi zimno, jak na ciebie patrzę!",
    "Jeszcze pierożka?",
