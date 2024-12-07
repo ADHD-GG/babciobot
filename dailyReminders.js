@@ -109,8 +109,8 @@ async function sendPostponedTasksReminder(client) {
 }
 
 async function sendChoresDoublingReminder(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '💻-wspólna-praca');
-    if (!channel) return console.error("Couldn't find the 💻-wspólna-praca channel.");
+    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
+    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
 
     const embed = new EmbedBuilder()
         .setColor('#FFD166')
@@ -145,8 +145,8 @@ async function sendSummaryReminder(client) {
 }
 
 async function sendFriendziesReminder(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '💻-wspólna-praca');
-    if (!channel) return console.error("Couldn't find the 💻-wspólna-praca channel.");
+    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
+    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
 
     const embed = new EmbedBuilder()
         .setColor('#dcccff')
