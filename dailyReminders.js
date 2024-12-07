@@ -16,6 +16,17 @@ function setupDailyReminders(client) {
     cron.schedule('00 14 * * 2', () => { sendPostponedTasksReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 20 * * 4', () => { sendChoresDoublingReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('30 14 * * 6', () => { sendFriendziesReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('00 8 * * *', () => { sendMorningRoutineReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('00 10 * * *', () => { sendDrinkWaterReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('00 16 * * *', () => { sendDrinkWaterReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('00 12 * * *', () => { sendEatFoodReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('00 14 * * *', () => { sendStretchingReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('00 20 * * *', () => { sendJournalingReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('00 22 * * *', () => { sendEveningRoutineReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('30 10 * * 6', () => { sendWaterPlantsReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('30 11 * * 6', () => { sendLaundryReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('30 14 25 * *', () => { sendBillsReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('30 14 28 * *', () => { sendShoppingReminder(client); }, { timezone: "Europe/Paris" });
 }
 
 async function sendKitchenReminder(client) {
@@ -115,7 +126,7 @@ async function sendChoresDoublingReminder(client) {
     const embed = new EmbedBuilder()
         .setColor('#FFD166')
         .setTitle('Chwila na małe porządki!')
-        .setDescription('Uporządkuj swoje najbliższe otoczenie – nie musi być na błysk. 🧹🗑️')
+        .setDescription('Uporządkuj swoje najbliższe otoczenie – pokój czy mieszkanie – i pamiętaj: nie musi być na błysk. 🧹🗑️')
         .setTimestamp();
 
     try {
@@ -177,6 +188,186 @@ async function sendMonthlyReminder(client) {
         console.log('Monthly reminder sent successfully.');
     } catch (error) {
         console.error('Error sending monthly reminder:', error);
+    }
+}
+
+async function sendMorningRoutineReminder(client) {
+    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
+    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+
+    const embed = new EmbedBuilder()
+        .setColor('#dcccff')
+        .setTitle('Nie zapomnij o porannej rutynie, osobo wnusiowa!')
+        .setDescription('Weź prysznic, umyj zęby, weź leki i napij się wody na dobry początek dnia! 💧💊')
+        .setTimestamp();
+
+    try {
+        await channel.send({ embeds: [embed] });
+        console.log('Morning routine reminder sent successfully.');
+    } catch (error) {
+        console.error('Error sending morning routine reminder:', error);
+    }
+}
+
+async function sendDrinkWaterReminder(client) {
+    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
+    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+
+    const embed = new EmbedBuilder()
+        .setColor('#9DD1F1')
+        .setTitle('Napij się wody!')
+        .setDescription('Pamiętaj o nawodnieniu w ciągu dnia, wnusix. 🍵🚰')
+        .setTimestamp();
+
+    try {
+        await channel.send({ embeds: [embed] });
+        console.log('Drink water reminder sent successfully.');
+    } catch (error) {
+        console.error('Error sending drink water reminder:', error);
+    }
+}
+
+async function sendEatFoodReminder(client) {
+    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
+    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+
+    const embed = new EmbedBuilder()
+        .setColor('#9DD1F1')
+        .setTitle('Pamiętaj o zjedzeniu posiłku')
+        .setDescription('Zjedz dziś chociaż jeden porządny, ciepły posiłek. 🥗🍜')
+        .setTimestamp();
+
+    try {
+        await channel.send({ embeds: [embed] });
+        console.log('Eat food reminder sent successfully.');
+    } catch (error) {
+        console.error('Error sending eat food reminder:', error);
+    }
+}
+
+async function sendStretchingReminder(client) {
+    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
+    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+
+    const embed = new EmbedBuilder()
+        .setColor('#dcccff')
+        .setTitle('Pora na przerwę na ćwiczenia rozciągające!')
+        .setDescription('Odejdź od ekranu! Popatrz w dal, żeby dać odpocząć pięknym oczkom. Zrób zestaw lekkich ćwiczeń albo idź na krótki spacer. 🧘🌳')
+        .setTimestamp();
+
+    try {
+        await channel.send({ embeds: [embed] });
+        console.log('Stretching reminder sent successfully.');
+    } catch (error) {
+        console.error('Error sending stretching reminder:', error);
+    }
+}
+
+async function sendJournalingReminder(client) {
+    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
+    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+
+    const embed = new EmbedBuilder()
+        .setColor('#dcccff')
+        .setTitle('Zrób sobie chwilę wolnego na dzienniczek!')
+        .setDescription('Zanotuj sobie parę słów dzisiejszych wydarzeniach, samopoczuciu, myślach. A może o czymś, na co czekasz, albo wyjątkowo cię ucieszyło? 📒💻')
+        .setTimestamp();
+
+    try {
+        await channel.send({ embeds: [embed] });
+        console.log('Journaling reminder sent successfully.');
+    } catch (error) {
+        console.error('Error sending journaling reminder:', error);
+    }
+}
+
+async function sendEveningRoutineReminder(client) {
+    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
+    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+
+    const embed = new EmbedBuilder()
+        .setColor('#dcccff')
+        .setTitle('Nie siedź do późna!')
+        .setDescription('Zrób wieczorną rutynę i połóż się spać. 🛌🌒')
+        .setTimestamp();
+
+    try {
+        await channel.send({ embeds: [embed] });
+        console.log('Evening routine reminder sent successfully.');
+    } catch (error) {
+        console.error('Error sending evening routine reminder:', error);
+    }
+}
+
+async function sendWaterPlantsReminder(client) {
+    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
+    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+
+    const embed = new EmbedBuilder()
+        .setColor('#41521F')
+        .setTitle('Pamiętaj kochanie, żeby podlać roślinki!')
+        .setDescription('Przy okazji zerknij, czy wszystko z nimi w porządku – być może potrzebują dodatkowej opieki. 🪴🌸')
+        .setTimestamp();
+
+    try {
+        await channel.send({ embeds: [embed] });
+        console.log('Water plants reminder sent successfully.');
+    } catch (error) {
+        console.error('Error sending water plants reminder:', error);
+    }
+}
+
+async function sendLaundryReminder(client) {
+    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
+    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+
+    const embed = new EmbedBuilder()
+        .setColor('#FFD166')
+        .setTitle('Pora na wstawienie prania!')
+        .setDescription('Zbierz rzeczy z mieszkania, wrzuć detergent i włącz pralkę. I pamiętaj, by wyciągnąć pranie po zakończeniu programu! 🧼🧺')
+        .setTimestamp();
+
+    try {
+        await channel.send({ embeds: [embed] });
+        console.log('Laundry reminder sent successfully.');
+    } catch (error) {
+        console.error('Error sending laundry reminder:', error);
+    }
+}
+
+async function sendBillsReminder(client) {
+    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
+    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+
+    const embed = new EmbedBuilder()
+        .setColor('#EF626C')
+        .setTitle('Sprawdź, czy masz opłacone rachunki!')
+        .setDescription('Zerknij na maila, do skrzynki pocztowej i upewnij się, że z konta pobrały się wszystkie zaplanowane płatności i subskrypcje. 📨💸')
+        .setTimestamp();
+
+    try {
+        await channel.send({ embeds: [embed] });
+        console.log('Bills reminder sent successfully.');
+    } catch (error) {
+        console.error('Error sending bills reminder:', error);
+    }
+}
+
+async function sendShoppingReminder(client) {
+    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
+    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+
+    const embed = new EmbedBuilder()
+        .setColor('#FFD166')
+        .setTitle('Zajrzyj do szafek i zrób listę zakupów')
+        .setDescription('Sprawdź, czy masz wszystkie niezbędne produkty i zapasy dla siebie, bliskich i pupili. Zrób listę brakujących rzeczy i zabierz ją ze sobą do sklepu albo zamów wszystko online. 🛒🛍️')
+        .setTimestamp();
+
+    try {
+        await channel.send({ embeds: [embed] });
+        console.log('Shopping reminder sent successfully.');
+    } catch (error) {
+        console.error('Error sending shopping reminder:', error);
     }
 }
 
