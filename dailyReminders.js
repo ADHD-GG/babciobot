@@ -14,7 +14,7 @@ function setupDailyReminders(client) {
     cron.schedule('55 11 * * 6', () => { sendBodydoublingReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('45 9 * * 1', () => { sendDeskCleaningReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 14 * * 2', () => { sendPostponedTasksReminder(client); }, { timezone: "Europe/Paris" });
-    cron.schedule('00 20 * * 4', () => { sendChoresDoublingReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('00 19 * * 4', () => { sendChoresDoublingReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('30 14 * * 6', () => { sendFriendziesReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 8 * * *', () => { sendMorningRoutineReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 10 * * *', () => { sendDrinkWaterReminder(client); }, { timezone: "Europe/Paris" });
