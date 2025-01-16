@@ -14,11 +14,11 @@ function setupDailyReminders(client) {
     cron.schedule('55 11 * * 6', () => { sendBodydoublingReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('45 9 * * 1', () => { sendDeskCleaningReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 14 * * 2', () => { sendPostponedTasksReminder(client); }, { timezone: "Europe/Paris" });
-    cron.schedule('00 19 * * 4', () => { sendChoresDoublingReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('30 18 * * 4', () => { sendChoresDoublingReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('30 14 * * 6', () => { sendFriendziesReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 8 * * *', () => { sendMorningRoutineReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 10 * * *', () => { sendDrinkWaterReminder(client); }, { timezone: "Europe/Paris" });
-    cron.schedule('00 16 * * *', () => { sendDrinkWaterReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('30 16 * * *', () => { sendDrinkWaterReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 12 * * *', () => { sendEatFoodReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 14 * * *', () => { sendStretchingReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 20 * * *', () => { sendJournalingReminder(client); }, { timezone: "Europe/Paris" });
@@ -27,6 +27,8 @@ function setupDailyReminders(client) {
     cron.schedule('30 11 * * 6', () => { sendLaundryReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('30 14 25 * *', () => { sendBillsReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('30 14 28 * *', () => { sendShoppingReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('15 14 10 * *', () => { sendServerReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('15 14 15 * *', () => { sendServerSupportReminder(client); }, { timezone: "Europe/Paris" });
 }
 
 async function sendKitchenReminder(client) {
@@ -54,7 +56,7 @@ async function sendBodydoublingReminder(client) {
     const embed = new EmbedBuilder()
         .setColor('#FFD166')
         .setTitle('Pora na sesję wspólnej pracy!')
-        .setDescription('Dołącz do kanału głosowego 💻-praca. 🧑‍💻')
+        .setDescription('Dołącz do kanału głosowego 💻-praca-w-ciszy. 🧑‍💻')
         .setTimestamp();
 
     try {
@@ -368,6 +370,42 @@ async function sendShoppingReminder(client) {
         console.log('Shopping reminder sent successfully.');
     } catch (error) {
         console.error('Error sending shopping reminder:', error);
+    }
+}
+
+async function sendServerReminder(client) {
+    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
+    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+
+    const embed = new EmbedBuilder()
+        .setColor('#FFD166')
+        .setTitle('Zajrzyj do serwerowych zasobów!')
+        .setDescription('Na serwerze kryje się wiele ciekawych rzeczy! Zajrzyj na https://discord.com/channels/1269650292215906418/1304265263159443486, rzuć okiem na https://discord.com/channels/1269650292215906418/1274775024078946365 oraz https://discord.com/channels/1269650292215906418/1274782836221804554! 📱👀')
+        .setTimestamp();
+
+    try {
+        await channel.send({ embeds: [embed] });
+        console.log('Server reminder sent successfully.');
+    } catch (error) {
+        console.error('Error sending server reminder:', error);
+    }
+}
+
+async function sendServerSupportReminder(client) {
+    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
+    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+
+    const embed = new EmbedBuilder()
+        .setColor('#FFD166')
+        .setTitle('Dołącz do serwerowego mecenatu!')
+        .setDescription('Postaw kawę i uzyskaj dostęp do bonusów https://buymeacoffee.com/neurospicyspace 💸💗')
+        .setTimestamp();
+
+    try {
+        await channel.send({ embeds: [embed] });
+        console.log('Server support reminder sent successfully.');
+    } catch (error) {
+        console.error('Error sending server support reminder:', error);
     }
 }
 
