@@ -379,7 +379,7 @@ async function sendServerReminder(client) {
     const embed = new EmbedBuilder()
         .setColor('#FFD166')
         .setTitle('Zajrzyj do serwerowych zasobów!')
-        .setDescription('Na serwerze kryje się wiele ciekawych rzeczy! Zajrzyj na https://discord.com/channels/1269650292215906418/1304265263159443486, rzuć okiem na https://discord.com/channels/1269650292215906418/1274775024078946365 oraz https://discord.com/channels/1269650292215906418/1274782836221804554! Chcesz zostawić sugestię, zgłosić nową propozycję lub udzielić informacji zdwrotnej? Wypełnij formularz, osobo wnusiowa! https://neurospicyspace.notion.site/1b55531af09381e88bc2e2d9f12d2128 📱👀')
+        .setDescription('Na serwerze kryje się wiele ciekawych rzeczy! Zajrzyj na https://discord.com/channels/1269650292215906418/1304265263159443486, rzuć okiem na https://discord.com/channels/1269650292215906418/1274775024078946365 oraz https://discord.com/channels/1269650292215906418/1274782836221804554! Chcesz zostawić sugestię, zgłosić nową propozycję lub udzielić informacji zwrotnej? Wypełnij formularz, osobo wnusiowa! https://neurospicyspace.notion.site/1b55531af09381e88bc2e2d9f12d2128 📱👀')
         .setTimestamp();
 
     try {
@@ -397,7 +397,7 @@ async function sendServerSupportReminder(client) {
     const embed = new EmbedBuilder()
         .setColor('#FFD166')
         .setTitle('Dołącz do serwerowego mecenatu!')
-        .setDescription('Postaw kawę i uzyskaj dostęp do bonusów https://buymeacoffee.com/neurospicyspace 💸💗')
+        .setDescription('Postaw kawę i uzyskaj dostęp do bonusów, wnusix! https://buymeacoffee.com/neurospicyspace 💸💗')
         .setTimestamp();
 
     try {
