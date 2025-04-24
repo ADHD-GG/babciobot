@@ -29,6 +29,7 @@ function setupDailyReminders(client) {
     cron.schedule('30 14 28 * *', () => { sendShoppingReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('15 14 10 * *', () => { sendServerReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('15 14 15 * *', () => { sendServerSupportReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('45 17 14 * *', () => { sendIntegrowankoReminder(client); }, { timezone: "Europe/Paris" });
 }
 
 async function sendKitchenReminder(client) {
@@ -374,13 +375,13 @@ async function sendShoppingReminder(client) {
 }
 
 async function sendServerReminder(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
-    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+    const channel = client.channels.cache.find(ch => ch.name === '📣-tablica-ogłoszeniowa');
+    if (!channel) return console.error("Couldn't find the 📣-tablica-ogłoszeniowa channel.");
 
     const embed = new EmbedBuilder()
         .setColor('#FFD166')
         .setTitle('Zajrzyj do serwerowych zasobów!')
-        .setDescription('Na serwerze kryje się wiele ciekawych rzeczy! Zajrzyj na https://discord.com/channels/1269650292215906418/1304265263159443486, rzuć okiem na https://discord.com/channels/1269650292215906418/1274775024078946365 oraz https://discord.com/channels/1269650292215906418/1274782836221804554! 📱👀')
+        .setDescription('Na serwerze kryje się wiele ciekawych rzeczy! Zajrzyj na https://discord.com/channels/1269650292215906418/1304265263159443486, rzuć okiem na https://discord.com/channels/1269650292215906418/1274775024078946365 oraz https://discord.com/channels/1269650292215906418/1274782836221804554! Chcesz zostawić sugestię, zgłosić nową propozycję lub udzielić informacji zdwrotnej? Wypełnij formularz, osobo wnusiowa! https://neurospicyspace.notion.site/1b55531af09381e88bc2e2d9f12d2128 📱👀')
         .setTimestamp();
 
     try {
@@ -392,8 +393,8 @@ async function sendServerReminder(client) {
 }
 
 async function sendServerSupportReminder(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
-    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+    const channel = client.channels.cache.find(ch => ch.name === '📣-tablica-ogłoszeniowa');
+    if (!channel) return console.error("Couldn't find the 📣-tablica-ogłoszeniowa channel.");
 
     const embed = new EmbedBuilder()
         .setColor('#FFD166')
@@ -408,5 +409,24 @@ async function sendServerSupportReminder(client) {
         console.error('Error sending server support reminder:', error);
     }
 }
+
+async function sendIntegrowankoReminder(client) {
+    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
+    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+
+    const embed = new EmbedBuilder()
+        .setColor('#1a60ff')
+        .setTitle('Wyjdź na wirtualne podwórko!')
+        .setDescription('Sprawdź termin najbliższej integracji na kanale głosowym i pograj albo pogdaj z innymi osobami serwerowymi, wnusix! https://discord.com/events/1269650292215906418/1364198617484623912 💓🎙️')
+        .setTimestamp();
+
+    try {
+        await channel.send({ embeds: [embed] });
+        console.log('Integrowanko reminder sent successfully.');
+    } catch (error) {
+        console.error('Error sending integrowanko reminder:', error);
+    }
+}
+
 
 module.exports = { setupDailyReminders };
