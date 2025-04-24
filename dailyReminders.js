@@ -7,11 +7,9 @@ function setupDailyReminders(client) {
     cron.schedule('00 10 * * 1', () => { sendTasksReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 16 * * 5', () => { sendSummaryReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 11 1 * *', () => { sendMonthlyReminder(client); }, { timezone: "Europe/Paris" });
-    cron.schedule('55 10 * * 1', () => { sendBodydoublingReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('55 11 * * 1-5', () => { sendBodydoublingReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('55 17 * * 1', () => { sendBodydoublingReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('55 17 * * 3', () => { sendBodydoublingReminder(client); }, { timezone: "Europe/Paris" });
-    cron.schedule('55 10 * * 5', () => { sendBodydoublingReminder(client); }, { timezone: "Europe/Paris" });
-    cron.schedule('55 11 * * 6', () => { sendBodydoublingReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('45 9 * * 1', () => { sendDeskCleaningReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 14 * * 2', () => { sendPostponedTasksReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('30 18 * * 4', () => { sendChoresDoublingReminder(client); }, { timezone: "Europe/Paris" });
