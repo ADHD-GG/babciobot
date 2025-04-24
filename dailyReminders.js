@@ -6,28 +6,30 @@ function setupDailyReminders(client) {
     cron.schedule('00 21 * * *', () => { sendKitchenReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 10 * * 1', () => { sendTasksReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 16 * * 5', () => { sendSummaryReminder(client); }, { timezone: "Europe/Paris" });
-    cron.schedule('00 11 1 * *', () => { sendMonthlyReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('55 11 * * 1-5', () => { sendBodydoublingReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('55 17 * * 1', () => { sendBodydoublingReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('55 17 * * 3', () => { sendBodydoublingReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('45 9 * * 1', () => { sendDeskCleaningReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 14 * * 2', () => { sendPostponedTasksReminder(client); }, { timezone: "Europe/Paris" });
-    cron.schedule('30 18 * * 4', () => { sendChoresDoublingReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('30 19 * * 4', () => { sendChoresDoublingReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('30 14 * * 6', () => { sendFriendziesReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 8 * * *', () => { sendMorningRoutineReminder(client); }, { timezone: "Europe/Paris" });
-    cron.schedule('00 10 * * *', () => { sendDrinkWaterReminder(client); }, { timezone: "Europe/Paris" });
-    cron.schedule('30 16 * * *', () => { sendDrinkWaterReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('05 10 * * *', () => { sendDrinkWaterReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('35 16 * * *', () => { sendDrinkWaterReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 12 * * *', () => { sendEatFoodReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 14 * * *', () => { sendStretchingReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 20 * * *', () => { sendJournalingReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('00 22 * * *', () => { sendEveningRoutineReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('30 10 * * 6', () => { sendWaterPlantsReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('30 11 * * 6', () => { sendLaundryReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('00 11 1 * *', () => { sendMonthlyReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('15 14 5 * *', () => { sendServerReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('15 14 5 * *', () => { sendEveryonePing(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('45 17 14 * *', () => { sendIntegrowankoReminder(client); }, { timezone: "Europe/Paris" });
+    cron.schedule('45 17 14 * *', () => { sendIntegrowankoPing(client); }, { timezone: "Europe/Paris" });
     cron.schedule('30 14 25 * *', () => { sendBillsReminder(client); }, { timezone: "Europe/Paris" });
     cron.schedule('30 14 28 * *', () => { sendShoppingReminder(client); }, { timezone: "Europe/Paris" });
-    cron.schedule('15 14 5 * *', () => { sendServerReminder(client); }, { timezone: "Europe/Paris" });
-    cron.schedule('15 14 10 * *', () => { sendServerSupportReminder(client); }, { timezone: "Europe/Paris" });
-    cron.schedule('45 17 14 * *', () => { sendIntegrowankoReminder(client); }, { timezone: "Europe/Paris" });
+    
 }
 
 async function sendKitchenReminder(client) {
@@ -379,7 +381,7 @@ async function sendServerReminder(client) {
     const embed = new EmbedBuilder()
         .setColor('#FFD166')
         .setTitle('Zajrzyj do serwerowych zasobów!')
-        .setDescription('Na serwerze kryje się wiele ciekawych rzeczy! Zajrzyj na https://discord.com/channels/1269650292215906418/1304265263159443486, rzuć okiem na https://discord.com/channels/1269650292215906418/1274775024078946365 oraz https://discord.com/channels/1269650292215906418/1274782836221804554! Chcesz zostawić sugestię, zgłosić nową propozycję lub udzielić informacji zwrotnej? Wypełnij formularz, osobo wnusiowa! https://neurospicyspace.notion.site/1b55531af09381e88bc2e2d9f12d2128 📱👀')
+        .setDescription('Na serwerze kryje się wiele ciekawych rzeczy! Zajrzyj na https://discord.com/channels/1269650292215906418/1304265263159443486, rzuć okiem na https://discord.com/channels/1269650292215906418/1274775024078946365 oraz https://discord.com/channels/1269650292215906418/1274782836221804554! Chcesz zostawić sugestię, zgłosić nową propozycję lub udzielić informacji zwrotnej? Wypełnij formularz: https://neurospicyspace.notion.site/1b55531af09381e88bc2e2d9f12d2128 Postaw kawę i uzyskaj dostęp do bonusów, osobo wnusiowa: https://buymeacoffee.com/neurospicyspace 📱👀')
         .setTimestamp();
 
     try {
@@ -426,5 +428,32 @@ async function sendIntegrowankoReminder(client) {
     }
 }
 
+async function sendIntegrowankoPing(client) {
+    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
+    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+
+    const role = roleMention(1269985806798295101);
+
+    try {
+        await channel.send({ embeds: [embed] });
+        console.log('Integrowanko ping sent successfully.');
+    } catch (error) {
+        console.error('Error sending integrowanko ping:', error);
+    }
+}
+
+async function sendEveryonePing(client) {
+    const channel = client.channels.cache.find(ch => ch.name === '📣-tablica-ogłoszeniowaa');
+    if (!channel) return console.error("Couldn't find the 📣-tablica-ogłoszeniowa channel.");
+
+    const role = roleMention(1269650292215906418);
+
+    try {
+        await channel.send({ embeds: [embed] });
+        console.log('Everyone ping sent successfully.');
+    } catch (error) {
+        console.error('Error sending everyone ping:', error);
+    }
+}
 
 module.exports = { setupDailyReminders };
