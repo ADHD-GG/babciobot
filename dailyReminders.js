@@ -123,8 +123,8 @@ async function sendPostponedTasksReminder(client) {
 }
 
 async function sendChoresDoublingReminder(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
-    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+    const channel = client.channels.cache.find(ch => ch.name === '💬-luźne-pogaduszki');
+    if (!channel) return console.error("Couldn't find the 💬-luźne-pogaduszki channel.");
 
     const embed = new EmbedBuilder()
         .setColor('#FFD166')
@@ -159,8 +159,8 @@ async function sendSummaryReminder(client) {
 }
 
 async function sendFriendziesReminder(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
-    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+    const channel = client.channels.cache.find(ch => ch.name === '💬-luźne-pogaduszki');
+    if (!channel) return console.error("Couldn't find the 💬-luźne-pogaduszki channel.");
 
     const embed = new EmbedBuilder()
         .setColor('#dcccff')
@@ -195,8 +195,8 @@ async function sendMonthlyReminder(client) {
 }
 
 async function sendMorningRoutineReminder(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
-    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+    const channel = client.channels.cache.find(ch => ch.name === '💬-luźne-pogaduszki');
+    if (!channel) return console.error("Couldn't find the 💬-luźne-pogaduszki channel.");
 
     const embed = new EmbedBuilder()
         .setColor('#dcccff')
@@ -213,8 +213,8 @@ async function sendMorningRoutineReminder(client) {
 }
 
 async function sendDrinkWaterReminder(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
-    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+    const channel = client.channels.cache.find(ch => ch.name === '💬-luźne-pogaduszki');
+    if (!channel) return console.error("Couldn't find the 💬-luźne-pogaduszki channel.");
 
     const embed = new EmbedBuilder()
         .setColor('#9DD1F1')
@@ -231,8 +231,8 @@ async function sendDrinkWaterReminder(client) {
 }
 
 async function sendEatFoodReminder(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
-    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+    const channel = client.channels.cache.find(ch => ch.name === '💬-luźne-pogaduszki');
+    if (!channel) return console.error("Couldn't find the 💬-luźne-pogaduszki channel.");
 
     const embed = new EmbedBuilder()
         .setColor('#9DD1F1')
@@ -249,8 +249,8 @@ async function sendEatFoodReminder(client) {
 }
 
 async function sendStretchingReminder(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
-    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+    const channel = client.channels.cache.find(ch => ch.name === '💬-luźne-pogaduszki');
+    if (!channel) return console.error("Couldn't find the 💬-luźne-pogaduszki channel.");
 
     const embed = new EmbedBuilder()
         .setColor('#dcccff')
@@ -267,8 +267,8 @@ async function sendStretchingReminder(client) {
 }
 
 async function sendJournalingReminder(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
-    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+    const channel = client.channels.cache.find(ch => ch.name === '💬-luźne-pogaduszki');
+    if (!channel) return console.error("Couldn't find the 💬-luźne-pogaduszki channel.");
 
     const embed = new EmbedBuilder()
         .setColor('#dcccff')
@@ -285,8 +285,8 @@ async function sendJournalingReminder(client) {
 }
 
 async function sendEveningRoutineReminder(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
-    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+    const channel = client.channels.cache.find(ch => ch.name === '💬-luźne-pogaduszki');
+    if (!channel) return console.error("Couldn't find the 💬-luźne-pogaduszki channel.");
 
     const embed = new EmbedBuilder()
         .setColor('#dcccff')
@@ -303,8 +303,8 @@ async function sendEveningRoutineReminder(client) {
 }
 
 async function sendWaterPlantsReminder(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
-    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+    const channel = client.channels.cache.find(ch => ch.name === '💬-luźne-pogaduszki');
+    if (!channel) return console.error("Couldn't find the 💬-luźne-pogaduszki channel.");
 
     const embed = new EmbedBuilder()
         .setColor('#41521F')
@@ -321,8 +321,8 @@ async function sendWaterPlantsReminder(client) {
 }
 
 async function sendLaundryReminder(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
-    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+    const channel = client.channels.cache.find(ch => ch.name === '💬-luźne-pogaduszki');
+    if (!channel) return console.error("Couldn't find the 💬-luźne-pogaduszki channel.");
 
     const embed = new EmbedBuilder()
         .setColor('#FFD166')
@@ -339,8 +339,8 @@ async function sendLaundryReminder(client) {
 }
 
 async function sendBillsReminder(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
-    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+    const channel = client.channels.cache.find(ch => ch.name === '💬-luźne-pogaduszki');
+    if (!channel) return console.error("Couldn't find the 💬-luźne-pogaduszki channel.");
 
     const embed = new EmbedBuilder()
         .setColor('#EF626C')
@@ -357,8 +357,8 @@ async function sendBillsReminder(client) {
 }
 
 async function sendShoppingReminder(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
-    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+    const channel = client.channels.cache.find(ch => ch.name === '💬-luźne-pogaduszki');
+    if (!channel) return console.error("Couldn't find the 💬-luźne-pogaduszki channel.");
 
     const embed = new EmbedBuilder()
         .setColor('#FFD166')
@@ -411,8 +411,8 @@ async function sendServerSupportReminder(client) {
 }
 
 async function sendIntegrowankoReminder(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
-    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
+    const channel = client.channels.cache.find(ch => ch.name === '💬-luźne-pogaduszki');
+    if (!channel) return console.error("Couldn't find the 💬-luźne-pogaduszki channel.");
 
     const embed = new EmbedBuilder()
         .setColor('#1a60ff')
@@ -428,32 +428,5 @@ async function sendIntegrowankoReminder(client) {
     }
 }
 
-async function sendIntegrowankoPing(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '👵-babciobot-powiadomienia');
-    if (!channel) return console.error("Couldn't find the 👵-babciobot-powiadomienia channel.");
-
-    const role = roleMention(1269985806798295101);
-
-    try {
-        await channel.send({ embeds: [embed] });
-        console.log('Integrowanko ping sent successfully.');
-    } catch (error) {
-        console.error('Error sending integrowanko ping:', error);
-    }
-}
-
-async function sendEveryonePing(client) {
-    const channel = client.channels.cache.find(ch => ch.name === '📣-tablica-ogłoszeniowaa');
-    if (!channel) return console.error("Couldn't find the 📣-tablica-ogłoszeniowa channel.");
-
-    const role = roleMention(1269650292215906418);
-
-    try {
-        await channel.send({ embeds: [embed] });
-        console.log('Everyone ping sent successfully.');
-    } catch (error) {
-        console.error('Error sending everyone ping:', error);
-    }
-}
 
 module.exports = { setupDailyReminders };
